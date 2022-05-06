@@ -28,7 +28,11 @@ noremap <F7> <ESC> :w !python3 <CR>
 "noremap <F6> <ESC> :w <CR> :!avrdude -v -patmega328p -P /dev/cu.usbmodem14* -c arduino -U flash:w:"out.elf"<CR>
 "noremap <F5> <ESC> :w <CR> :!avrdude -v -patmega328p -P /dev/cu.usbmodemHID* -c arduino -U flash:w:"out.elf"<CR>
  
- 
+"nnoremap <F4> <ESC> :w <CR> :!g++ -o %:r% -std=c++11 <Enter>
+"nnoremap <F5> :!./%:r.out
+
+autocmd filetype cpp nnoremap <f5> :w <bar> !g++ -std=c++11 % -o %:r && ./%:r <cr>
+
 noremap <F8> <ESC> :w <CR> :!g++ -fsanitize=address -std=c++17 -DONPC -O2 -o %< % && ./%< < inp<CR>
 inoremap <F8> <ESC> :w <CR> :!g++ -fsanitize=address -std=c++17 -DONPC -O2 -o "%<" "%" && "./%<" < inp<CR>
  
