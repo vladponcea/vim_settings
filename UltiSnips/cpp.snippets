@@ -61,15 +61,33 @@ int32_t main() {
 	return 0;
 }
 endsnippet
- 
-snippet minimal "minimalist begin"
+
+snippet minimalf "minimalist begin with files"
 #include <bits/stdc++.h>
- 
+
 using namespace std;
 typedef long long ll;
- 
-int32_t main() {
-    $0
+
+ifstream f("${1:a}.in");
+ofstream g("$1.in");
+
+int main() {
+	$0
+
+	return 0;
+}
+endsnippet
+
+snippet minimal "minimalist begin"
+#include <bits/stdc++.h>
+
+using namespace std;
+typedef long long ll;
+
+int main() {
+	$0
+
+	return 0;
 }
 endsnippet
  
