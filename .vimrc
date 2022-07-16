@@ -31,7 +31,7 @@ noremap <F7> <ESC> :w !python3 <CR>
 "nnoremap <F4> <ESC> :w <CR> :!g++ -o %:r% -std=c++11 <Enter>
 "nnoremap <F5> :!./%:r.out
 
-autocmd filetype cpp nnoremap <f5> :w <bar> !g++ -std=c++11 % -o %:r && ./%:r <cr>
+autocmd filetype cpp nnoremap <F4> :w <bar> !g++ -std=c++11 % -o %:r && ./%:r <cr>
 
 noremap <F8> <ESC> :w <CR> :!g++ -fsanitize=address -std=c++17 -DONPC -O2 -o %< % && ./%< < inp<CR>
 inoremap <F8> <ESC> :w <CR> :!g++ -fsanitize=address -std=c++17 -DONPC -O2 -o "%<" "%" && "./%<" < inp<CR>
