@@ -48,8 +48,8 @@ inoremap <F9> <ESC> :w <CR> :!g++ -fsanitize=address -std=c++17 -Wall -Wextra -W
 noremap <F10> <ESC> :w <CR> :!g++ -fsanitize=address -std=c++17 -Wall -Wextra -Wshadow -DONPC -O2 -o %< % && ./%< < inp<CR>
 inoremap <F10> <ESC> :w <CR> :!g++ -fsanitize=address -std=c++17 -Wall -Wextra -Wshadow -DONPC -O2 -o "%<" "%" && "./%<" < inp<CR>
  
- 
- 
+noremap <F12> <ESC> :w <CR> :!clear <CR>
+
 "inoremap {<CR> {<CR>}<ESC>k$A<CR>
  
 noremap <TAB> %
